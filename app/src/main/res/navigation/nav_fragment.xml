@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_fragment"
+    app:startDestination="@id/home">
+
+    <fragment
+        android:id="@+id/home"
+        android:name="com.example.software_dev.Home"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_home_to_search"
+            app:destination="@id/search" />
+        <action
+            android:id="@+id/action_home_to_profile"
+            app:destination="@id/profile" />
+        <action
+            android:id="@+id/action_home_to_booking"
+            app:destination="@id/booking" />
+    </fragment>
+    <fragment
+        android:id="@+id/booking"
+        android:name="com.example.software_dev.Booking"
+        android:label="fragment_booking"
+        tools:layout="@layout/fragment_booking" >
+        <action
+            android:id="@+id/action_booking_to_home"
+            app:destination="@id/home" />
+        <action
+            android:id="@+id/action_booking_to_search"
+            app:destination="@id/search" />
+        <action
+            android:id="@+id/action_booking_to_profile"
+            app:destination="@id/profile" />
+    </fragment>
+    <fragment
+        android:id="@+id/profile"
+        android:name="com.example.software_dev.Profile"
+        android:label="fragment_profile"
+        tools:layout="@layout/fragment_profile" >
+        <action
+            android:id="@+id/action_profile_to_search"
+            app:destination="@id/search" />
+        <action
+            android:id="@+id/action_profile_to_home"
+            app:destination="@id/home" />
+        <action
+            android:id="@+id/action_profile_to_booking"
+            app:destination="@id/booking" />
+        <action
+            android:id="@+id/action_profile_to_booking2"
+            app:destination="@id/booking" />
+    </fragment>
+    <fragment
+        android:id="@+id/search"
+        android:name="com.example.software_dev.Search"
+        android:label="fragment_search"
+        tools:layout="@layout/fragment_search" >
+        <action
+            android:id="@+id/action_search_to_booking"
+            app:destination="@id/booking" />
+        <action
+            android:id="@+id/action_search_to_home"
+            app:destination="@id/home" />
+        <action
+            android:id="@+id/action_search_to_profile"
+            app:destination="@id/profile" />
+    </fragment>
+</navigation>

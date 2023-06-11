@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_margin="10dp"
+    android:background="@color/white">
+    
+<androidx.cardview.widget.CardView
+    android:id="@+id/movie_card_view"
+    android:layout_width="150dp"
+    android:layout_height="186dp"
+    app:cardCornerRadius="10dp"
+    >
+    <ImageView
+        android:id="@+id/movie_poster"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/avengers"
+        android:scaleType="centerCrop"
+        />
+</androidx.cardview.widget.CardView>
+    <androidx.cardview.widget.CardView
+        android:id="@+id/rating_card_view"
+        android:layout_width="150dp"
+        android:layout_height="30dp"
+        app:cardCornerRadius="10dp"
+        android:layout_below="@id/movie_card_view"
+        android:layout_marginTop="5dp"
+        android:backgroundTint="#E6D116"
+        >
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+        <ImageView
+            android:id="@+id/imdb_logo"
+            android:layout_width="50dp"
+            android:layout_height="20dp"
+            android:src="@drawable/imdb_logo"
+            android:scaleType="centerCrop"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            />
+        <TextView
+            android:id="@+id/rating"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="3.6"
+            android:textColor="@color/black"
+            android:textSize="15dp"
+            android:layout_toRightOf="@id/imdb_logo"
+            android:textStyle="bold"
+            android:layout_centerVertical="true"
+            />
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+    <TextView
+        android:id="@+id/movie_name"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/rating_card_view"
+        android:layout_marginTop="5dp"
+        android:text="AVENGER ENDGAME"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        />
+</RelativeLayout>

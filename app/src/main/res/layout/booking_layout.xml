@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/white">
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        app:cardElevation="10dp"
+        >
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginHorizontal="10dp"
+    android:layout_marginVertical="15dp"
+    >
+<LinearLayout
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:id="@+id/llmoviename"
+    >
+    <ImageView
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:src="@drawable/movie"
+        android:layout_gravity="center_vertical"/>
+    <TextView
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/Moviename"
+        android:text="Avengers"
+        android:textSize="25dp"
+        android:layout_marginLeft="10dp"
+        android:textColor="@color/black"
+        />
+
+</LinearLayout>
+    <ImageView
+        android:id="@+id/status"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+
+        android:src="@drawable/confirmed"
+        android:layout_alignParentEnd="true"
+/>
+
+    <LinearLayout
+        android:id="@+id/llcinemaname"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_below="@id/llmoviename"
+        >
+        <ImageView
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:src="@drawable/placeholder"
+
+            android:layout_gravity="center_vertical"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/Cinemaname"
+            android:text="acropolish"
+            android:textSize="20dp"
+            android:layout_marginLeft="10dp"
+            android:textColor="@color/black"
+            />
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/llMovie_date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_below="@id/llcinemaname"
+        >
+        <ImageView
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:src="@drawable/calendar_icon"
+            android:layout_gravity="center_vertical"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/Movie_date"
+            android:text="17 May"
+            android:textSize="20dp"
+            android:layout_marginLeft="10dp"
+            android:textColor="@color/black"
+            />
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/llMovie_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_below="@id/llcinemaname"
+        android:layout_toRightOf="@id/llMovie_date"
+        android:layout_marginLeft="20dp"
+        >
+        <ImageView
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:src="@drawable/chronometer"
+            android:layout_gravity="center_vertical"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/Movie_time"
+            android:text="10:22 AM"
+            android:textSize="20dp"
+            android:layout_marginLeft="10dp"
+            android:textColor="@color/black"
+            />
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/ll_seat"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_below="@id/llMovie_date"
+        >
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@drawable/chair"
+            android:layout_gravity="center_vertical"/>
+
+        <TextView
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/seatno"
+            android:text="1"
+            android:textSize="20dp"
+            android:textColor="@color/black"
+            />
+
+    </LinearLayout>
+    <Button
+        android:id="@+id/btn_cancel"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:layout_below="@id/llMovie_time"
+        android:layout_alignParentEnd="true"
+        android:text="Cancel"
+        />
+</RelativeLayout>
+    </androidx.cardview.widget.CardView>
+</RelativeLayout>

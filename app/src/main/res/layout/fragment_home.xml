@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".Home"
+    android:background="@color/white">
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="?attr/actionBarSize"
+    android:background="@color/purple_200"
+    android:id="@+id/tab"
+    >
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="SOFTWARE DEVELOPMENT"
+        android:layout_centerVertical="true"
+        android:textColor="@color/black"
+        android:textSize="20dp"
+        android:layout_marginLeft="10dp"
+        />
+</RelativeLayout>
+    <ScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tab"
+        android:layout_marginBottom="50dp"
+        >
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    >
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:id="@+id/latestmovie">
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:text="Latest Movies"
+        android:textSize="20dp"
+        android:layout_marginLeft="10dp"
+        android:textColor="@color/black"
+        android:textStyle="normal"
+        />
+<androidx.recyclerview.widget.RecyclerView
+    android:id="@+id/latest_recyclerview"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:listitem="@layout/latest_movie_layout"
+    android:scrollbars="horizontal"
+    android:orientation="horizontal"
+    app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+    />
+    </LinearLayout>
+    <ImageView
+        android:id="@+id/illustration"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_below="@id/latestmovie"
+        android:src="@drawable/movie_illustration"
+        android:scaleType="fitXY"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:id="@+id/upcomingmovie"
+        android:layout_below="@id/illustration"
+        android:layout_marginTop="10dp">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Upcoming Movies"
+            android:textSize="20dp"
+            android:layout_marginLeft="10dp"
+            android:textColor="@color/black"
+            android:textStyle="normal"
+            />
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/upcoming_recyclerview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tools:listitem="@layout/latest_movie_layout"
+            android:scrollbars="horizontal"
+            android:orientation="horizontal"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            />
+    </LinearLayout>
+</RelativeLayout>
+    </ScrollView>
+</RelativeLayout>
