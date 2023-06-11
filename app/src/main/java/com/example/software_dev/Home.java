@@ -43,10 +43,10 @@ public class Home extends Fragment{
         // Upcoming RECYCLER VIEW
         upcomingrecyclerView=view.findViewById(R.id.upcoming_recyclerview);
         List<upcomingdataitem> upcomingitems=new ArrayList<upcomingdataitem>();
-        upcomingitems.add(new upcomingdataitem("avenger","4.5"));
-        upcomingitems.add(new upcomingdataitem("john wick","5"));
-        upcomingitems.add(new upcomingdataitem("tu jhuthi main makkar","4.5"));
-        upcomingitems.add(new upcomingdataitem("suzume","3.2"));
+        upcomingitems.add(new upcomingdataitem("avenger","4.5",R.drawable.johnwick));
+        upcomingitems.add(new upcomingdataitem("john wick","5",R.drawable.johnwick));
+        upcomingitems.add(new upcomingdataitem("tu jhuthi main makkar","4.5",R.drawable.johnwick));
+        upcomingitems.add(new upcomingdataitem("suzume","3.2",R.drawable.johnwick));
         upcomingrecyclerView.setAdapter(new upcomingmovie_adapter(getContext(),upcomingitems));
 
         return view;
